@@ -33,6 +33,11 @@ namespace Zachet_4_Maksimov
             {
                 string[] lettersData = File.ReadAllLines("letters.txt");
                 lettersFile = new List<char>(lettersData.Select(line => char.Parse(line)));
+                if (lettersFile.Count == 0)
+                {
+                    MessageBox.Show("Файл пуст");
+                    return;
+                }
 
                 string[] numbersData = File.ReadAllLines("numbers.txt");
                 numbersFile = new List<int>(numbersData.Select(line => int.Parse(line)));
@@ -49,6 +54,7 @@ namespace Zachet_4_Maksimov
                 MessageBox.Show("Ошибка чтения файла.");
                 return;
             }
+            
         }
 
         private void btnGenericA_Click(object sender, EventArgs e)
@@ -95,20 +101,42 @@ namespace Zachet_4_Maksimov
             {
                 if (!char.IsDigit(el))
                 {
-                    MessageBox.Show("Поле цифры содержит буквы!");
+                    MessageBox.Show("Поле цифры содержит буквы!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            foreach (var el in txtLetter.Text)
+            {
+                if (char.IsDigit(el))
+                {
+                    MessageBox.Show("Поле буквы содеражть только буквы!", "Ошибка", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            foreach (var el in txtColors.Text)
+            {
+                if (char.IsDigit(el))
+                {
+                    MessageBox.Show("Поле цвет содеражть только буквы!", "Ошибка", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                     return;
                 }
             }
 
             if (txtNumber.Text.Length > 1)
             {
-                MessageBox.Show("Поле должно содержать только 1 элемент");
+                MessageBox.Show("Поле должно содержать только 1 элемент", "Ошибка", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
 
             if (txtLetter.Text.Length > 1)
             {
-                MessageBox.Show("Поле должно содержать только 1 элемент");
+                MessageBox.Show("Поле должно содержать только 1 элемент", "Ошибка", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
 
@@ -118,18 +146,24 @@ namespace Zachet_4_Maksimov
 
             var newProduct = new { Буква = newLetter, Число = newNumber, Цвет = newColor };
 
-
             List<object> cartesianProductList = new List<object>();
 
             foreach (var item in cartesianProduct)
             {
-                cartesianProductList.Add(item);
+                if (cartesianProduct.Contains(item))
+                {
+                    MessageBox.Show("Такое поле уже есть", "Ошибка", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    cartesianProductList.Add(item);
+                }
             }
 
             cartesianProductList.Add(newProduct);
-
             cartesianProduct = cartesianProductList;
-
             var result = String.Join(Environment.NewLine, cartesianProduct);
 
             MessageBox.Show(result, "Декартовы произведения", MessageBoxButtons.OK, MessageBoxIcon.Information);
