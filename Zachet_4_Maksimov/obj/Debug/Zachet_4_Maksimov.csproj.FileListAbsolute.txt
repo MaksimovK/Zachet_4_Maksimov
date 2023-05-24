@@ -1,0 +1,11 @@
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\bin\Debug\Zachet_4_Maksimov.exe.config
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\bin\Debug\Zachet_4_Maksimov.exe
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\bin\Debug\Zachet_4_Maksimov.pdb
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.csproj.AssemblyReference.cache
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.csproj.SuggestedBindingRedirects.cache
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.Properties.Resources.resources
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.csproj.GenerateResource.cache
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.csproj.CoreCompileInputs.cache
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.exe
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.pdb
+C:\Users\kmaki\RiderProjects\Zachet_4_Maksimov\Zachet_4_Maksimov\obj\Debug\Zachet_4_Maksimov.Form1.resources
